@@ -12,7 +12,6 @@ public class Dosage {
     private Date endDate;
     private String hour;
     private int quantity;
-    private Date registrationDate;
     private Date startDate;
     private boolean state;
     private int idMedicalTreatment;

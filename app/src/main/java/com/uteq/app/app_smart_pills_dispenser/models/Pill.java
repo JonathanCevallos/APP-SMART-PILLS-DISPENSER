@@ -11,6 +11,5 @@ public class Pill {
     private int id;
     private String description;
     private String name;
-    private Date registrationDate;
     private boolean state;
 }
