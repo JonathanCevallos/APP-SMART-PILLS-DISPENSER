@@ -5,9 +5,9 @@ import java.util.Date;
 public class MedicalTreatment {
     private int id;
     private String description;
-    private boolean end_date;
-    private Date registration_date;
-    private Date start_date;
-    private int id_doctor;
-    private int id_patient;
+    private boolean endDate;
+    private Date registrationDate;
+    private Date startDate;
+    private int idDoctor;
+    private int idPatient;
 }

@@ -6,6 +6,6 @@ public class Pill {
     private int id;
     private String description;
     private String name;
-    private Date registration_date;
+    private Date registrationDate;
     private boolean state;
 }

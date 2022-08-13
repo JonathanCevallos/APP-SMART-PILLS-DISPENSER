@@ -4,12 +4,12 @@ import java.util.Date;
 
 public class Dosage {
     private int id;
-    private Date end_date;
+    private Date endDate;
     private String hour;
     private int quantity;
-    private Date registration_date;
-    private Date start_date;
+    private Date registrationDate;
+    private Date startDate;
     private boolean state;
-    private int id_medical_treatment;
-    private int id_pill;
+    private int idMedicalTreatment;
+    private int idPill;
 }
