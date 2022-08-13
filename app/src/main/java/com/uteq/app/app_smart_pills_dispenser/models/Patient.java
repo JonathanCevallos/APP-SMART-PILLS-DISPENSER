@@ -2,13 +2,13 @@ package com.uteq.app.app_smart_pills_dispenser.models;
 
 import java.util.Date;
 
-public class patient {
+public class Patient {
     private String id;
     private Date gender;
     private String name;
-    private String registration_date;
+    private String registrationDate;
     private Boolean state;
-    private int id_carer;
+    private int idCarer;
 
     public String getId() {
         return id;
@@ -35,11 +35,11 @@ public class patient {
     }
 
     public String getRegistration_date() {
-        return registration_date;
+        return registrationDate;
     }
 
     public void setRegistration_date(String registration_date) {
-        this.registration_date = registration_date;
+        this.registrationDate = registration_date;
     }
 
     public Boolean getState() {
@@ -51,10 +51,10 @@ public class patient {
     }
 
     public int getId_carer() {
-        return id_carer;
+        return idCarer;
     }
 
     public void setId_carer(int id_carer) {
-        this.id_carer = id_carer;
+        this.idCarer = id_carer;
     }
 }
