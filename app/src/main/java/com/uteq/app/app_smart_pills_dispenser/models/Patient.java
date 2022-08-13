@@ -11,7 +11,6 @@ public class Patient {
     private String id;
     private Date gender;
     private String name;
-    private String registration_Date;
     private Boolean state;
     private int idCarer;
 

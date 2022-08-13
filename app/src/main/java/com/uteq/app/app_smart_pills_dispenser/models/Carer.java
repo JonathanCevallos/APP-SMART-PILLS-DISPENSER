@@ -12,8 +12,7 @@ public class Carer {
     private String email;
     private String name;
     private String password;
-    private String phone_number;
-    private Date registation_date;
+    private String phoneNumber;
     private boolean state;
 
 }
