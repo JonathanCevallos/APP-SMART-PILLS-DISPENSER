@@ -14,6 +14,6 @@ public class CarerActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_carer);
 
-        TextView name
+        TextView name;
     }
 }
