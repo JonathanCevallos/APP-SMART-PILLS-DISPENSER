@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.uteq.app.app_smart_pills_dispenser.MainActivity;
 import com.uteq.app.app_smart_pills_dispenser.R;
 import com.uteq.app.app_smart_pills_dispenser.models.Dosage;
 
