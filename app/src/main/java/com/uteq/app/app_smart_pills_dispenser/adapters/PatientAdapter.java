@@ -2,6 +2,8 @@ package com.uteq.app.app_smart_pills_dispenser.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,6 +53,8 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientV
         holder.txtgender.setText(MoreUtils.coalesce(patient.getGender(), "N/D"));
         holder.txtbirthDate.setText(MoreUtils.coalesce(patient.getBirth_date(), "N/D"));
 
+
+
     }
 
 
@@ -70,9 +74,9 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientV
         public PatientViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            txtname = itemView.findViewById(R.id.txtname);
-            txtgender = itemView.findViewById(R.id.txtNombres);
-            txtbirthDate = itemView.findViewById(R.id.txtArea);
+            txtname = itemView.findViewById(R.id.txtNameCarer);
+            txtgender = itemView.findViewById(R.id.txtGenderPatient);
+            txtbirthDate = itemView.findViewById(R.id.txtbirthDatePatient);
             imgEvaluador = itemView.findViewById(R.id.imgEvaluador);
             cardView = itemView.findViewById(R.id.cardView);
         }
