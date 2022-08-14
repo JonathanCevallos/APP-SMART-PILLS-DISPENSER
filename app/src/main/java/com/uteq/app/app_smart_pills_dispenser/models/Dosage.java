@@ -4,8 +4,7 @@ import java.util.Date;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-@Data
-@NoArgsConstructor
+
 public class Dosage {
     private int id;
     private Date endDate;
