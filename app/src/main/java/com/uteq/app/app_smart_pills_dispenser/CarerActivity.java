@@ -55,7 +55,7 @@ public class CarerActivity extends AppCompatActivity {
                 c.setState((true));
 
                 if(txtpassword.toString() == txtRepeatPassword.toString()) {
-                    
+
                     addCarer(c);
                 }
                 else{
