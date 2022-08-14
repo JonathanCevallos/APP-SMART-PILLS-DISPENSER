@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Patient {
     private String id;
-    private String birthDate;
+    private String birth_date;
     private String gender;
     private String name;
     private Boolean state;

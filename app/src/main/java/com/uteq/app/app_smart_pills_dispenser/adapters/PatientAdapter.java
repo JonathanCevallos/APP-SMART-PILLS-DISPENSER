@@ -51,7 +51,7 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientV
 
         holder.txtId.setText(MoreUtils.coalesce(patient.getName(), "N/D"));
         holder.txtNombres.setText(MoreUtils.coalesce(patient.getGender(), "N/D"));
-        holder.txtArea.setText(MoreUtils.coalesce(patient.getBirthDate(), "N/D"));
+        holder.txtArea.setText(MoreUtils.coalesce(patient.getBirth_date(), "N/D"));
 
 
 
