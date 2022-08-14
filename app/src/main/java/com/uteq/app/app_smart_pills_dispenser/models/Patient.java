@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Patient {
     private String id;
-    private Date gender;
+    private String birthDate;
+    private String gender;
     private String name;
     private Boolean state;
     private int idCarer;
-
 }
