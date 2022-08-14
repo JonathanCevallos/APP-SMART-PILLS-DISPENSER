@@ -16,4 +16,5 @@ public class Dosage {
     private boolean state;
     private int idMedicalTreatment;
     private int idPill;
+
 }
