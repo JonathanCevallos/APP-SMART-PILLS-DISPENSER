@@ -13,6 +13,6 @@ public interface CarerService {
     @GET("api/carer")
     Call<List<Carer>>getCarer();
 
-    @POST("add")
+    @POST("api/carer")
     Call<Carer>addCarer(@Body Carer carer);
 }

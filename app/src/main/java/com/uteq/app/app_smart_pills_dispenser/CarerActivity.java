@@ -51,8 +51,16 @@ public class CarerActivity extends AppCompatActivity {
                 c.setName(txtname.getText().toString());
                 c.setEmail(txtemail.getText().toString());
                 c.setPassword(txtpassword.getText().toString());
+                c.setPhone_number(txtphoneNumber.getText().toString());
+                c.setState((true));
 
-                addCarer(c);
+                if(txtpassword.toString() == txtRepeatPassword.toString()) {
+
+                    addCarer(c);
+                }
+                else{
+                    Toast.makeText(CarerActivity.this, "Error al ingrese una buena contraseña. " , Toast.LENGTH_LONG).show();
+                }
 
             }
         });
