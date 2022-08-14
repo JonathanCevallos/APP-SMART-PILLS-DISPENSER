@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void listDosage()
     {
-        //Call<List<Dosage>> call =
+        Call<List<Dosage>> call = dosageService.getDosage();
+
     }
 }
