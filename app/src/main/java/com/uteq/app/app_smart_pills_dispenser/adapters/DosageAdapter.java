@@ -51,7 +51,6 @@ public class DosageAdapter extends ArrayAdapter<Dosage> {
         txtState.setText(String.format("state:%s", dosages.get(position).isState()));
         txtIdMedicalTreatment.setText(String.format("idMedicalTreatment:%s", dosages.get(position).getIdMedicalTreatment()));
         txtIdPill.setText(String.format("idPill:%s", dosages.get(position).getIdPill()));
-
         return rowView;
     }
 }

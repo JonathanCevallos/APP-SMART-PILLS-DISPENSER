@@ -38,36 +38,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         recyclerView = findViewById(R.id.reciclerview);
         txtSubtitle = findViewById(R.id.txtSubtitle);
-
-
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
-
         patientAdapter = new PatientAdapter();
         recyclerView.setAdapter(patientAdapter);
 
-
         btnRegister = findViewById(R.id.btnRegisterCarer);
 
-        try {
+        try
+        {
             getpatient();
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
 
-       btnRegister.setOnClickListener(new View.OnClickListener() {
+       btnRegister.setOnClickListener(new View.OnClickListener()
+       {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CarerActivity.class);
                 startActivity(intent);
             }
         });
-
     }
 
 
