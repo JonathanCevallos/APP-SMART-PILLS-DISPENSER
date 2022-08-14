@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/cardView">
+    android:id="@+id/cardViewPill">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -39,7 +39,7 @@
                 <TextView
                     android:text="N/D"
                     android:layout_weight="1"
-                    android:id="@+id/txtName"
+                    android:id="@+id/txtPillName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -59,10 +59,31 @@
                 <TextView
                     android:text="N/D"
                     android:layout_weight="1"
-                    android:id="@+id/txtDescription"
+                    android:id="@+id/txtPillDescription"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" />
             </LinearLayout>
+
+            <LinearLayout
+                android:gravity="top"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de registración:" />
+                <TextView
+                    android:text="N/D"
+                    android:layout_weight="1"
+                    android:id="@+id/txtPillRegistrationDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

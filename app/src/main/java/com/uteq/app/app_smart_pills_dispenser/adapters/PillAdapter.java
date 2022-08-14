@@ -43,8 +43,9 @@ public class PillAdapter extends RecyclerView.Adapter<PillAdapter.PillViewHolder
     public void onBindViewHolder(@NonNull PillAdapter.PillViewHolder holder, int position) {
         Pill pill = data.get(position);
 
-        holder.txtName.setText(MoreUtils.coalesce(pill.getName(), "N/D"));
-        holder.txtDescription.setText(MoreUtils.coalesce(pill.getDescription(), "N/D"));
+        holder.txtPillName.setText(MoreUtils.coalesce(pill.getName(), "N/D"));
+        holder.txtPillDescription.setText(MoreUtils.coalesce(pill.getDescription(), "N/D"));
+        holder.txtPillRegistrationDate.setText(MoreUtils.coalesce(pill.getRegistration_date(), "N/D"));
     }
     public int getItemCount() {
         return data.size();
@@ -52,15 +53,18 @@ public class PillAdapter extends RecyclerView.Adapter<PillAdapter.PillViewHolder
 
     public class PillViewHolder extends RecyclerView.ViewHolder {
 
-        TextView txtName;
-        TextView txtDescription;
+        TextView txtPillName;
+        TextView txtPillDescription;
+        TextView txtPillRegistrationDate;
         CardView cardView;
 
 
         public PillViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtName = itemView.findViewById(R.id.txtName);
-            txtDescription = itemView.findViewById(R.id.txtDescription);
+            txtPillName = itemView.findViewById(R.id.txtPillName);
+            txtPillDescription = itemView.findViewById(R.id.txtPillDescription);
+            txtPillRegistrationDate = itemView.findViewById(R.id.txtPillRegistrationDate);
+            cardView = itemView.findViewById(R.id.cardViewPill);
         }
     }
 }
