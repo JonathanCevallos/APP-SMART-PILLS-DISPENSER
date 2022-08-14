@@ -1,19 +1,23 @@
 package com.uteq.app.app_smart_pills_dispenser;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
+import android.widget.TextView;
 
-import com.uteq.app.app_smart_pills_dispenser.adapters.DosageAdapter;
+import com.uteq.app.app_smart_pills_dispenser.adapters.PatientAdapter;
 import com.uteq.app.app_smart_pills_dispenser.models.Dosage;
+import com.uteq.app.app_smart_pills_dispenser.models.Patient;
 import com.uteq.app.app_smart_pills_dispenser.services.DosageService;
+import com.uteq.app.app_smart_pills_dispenser.utils.Apis;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -24,21 +28,39 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnRegister;
 
-    DosageService dosageService;
 
-    List<Dosage> listDosage = new ArrayList<>();
-    ListView listView;
+    private TextView txtSubtitle;
+    private RecyclerView recyclerView;
+    private PatientAdapter patientAdapter;
+    DosageService dosageService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listView = (ListView)findViewById(R.id.listView);
+
+        recyclerView = findViewById(R.id.reciclerview);
+        txtSubtitle = findViewById(R.id.txtSubtitle);
+
+
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+
+
+        patientAdapter = new PatientAdapter();
+        recyclerView.setAdapter(patientAdapter);
 
 
         btnRegister = findViewById(R.id.btnRegisterCarer);
 
-        btnRegister.setOnClickListener(new View.OnClickListener() {
+        try {
+            getpatient();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+       btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CarerActivity.class);
@@ -49,21 +71,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void getpatient() throws Exception {
+        Call<List<Patient>> patientList = Apis.getPatientService().getPatient();
 
-    public void listDosages()
-    {
-        Call<List<Dosage>> call = dosageService.getDosage();
-        call.enqueue(new Callback<List<Dosage>>() {
+        patientList.enqueue(new Callback<List<Patient>>() {
             @Override
-            public void onResponse(Call<List<Dosage>> call, Response<List<Dosage>> response) {
-                listDosage = response.body();
-                //listView.setAdapter(new DosageAdapter(MainActivity.this, R.layout.activity_main, listDosage));
+            public void onResponse(Call<List<Patient>> call, Response<List<Patient>> response) {
+                if(response.isSuccessful()){
+                    List <Patient>  patients = response.body();
+                    patientAdapter.setData(patients);
+                }
             }
 
             @Override
-            public void onFailure(Call<List<Dosage>> call, Throwable t) {
-                Log.e("Error: ", t.getMessage());
+            public void onFailure(Call<List<Patient>> call, Throwable t) {
+                Log.e("faliure", t.getLocalizedMessage());
             }
         });
+    }
+
+
+    public void listDosage()
+    {
+        //Call<List<Dosage>> call =
     }
 }
