@@ -47,7 +47,7 @@ public class DosageAdapter extends ArrayAdapter<Dosage> {
         txtHour.setText(String.format("hour:%s", dosages.get(position).getHour()));
         txtQuantity.setText(String.format("quantity:%s", dosages.get(position).getQuantity()));
         txtStartDate.setText(String.format("startDate:%s", dosages.get(position).getStartDate()));
-        //txtState.setText(String.format("state:%s", dosages.get(position).getState()));
+        txtState.setText(String.format("state:%s", dosages.get(position).isState()));
         txtIdMedicalTreatment.setText(String.format("idMedicalTreatment:%s", dosages.get(position).getIdMedicalTreatment()));
         txtIdPill.setText(String.format("idPill:%s", dosages.get(position).getIdPill()));
 
