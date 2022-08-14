@@ -6,10 +6,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Doctor {
-    int id;
-    String direction;
-    String email;
-    String name;
-    String phoneNumber;
+    private int id;
+    private String direction;
+    private String email;
+    private String name;
+    private String phoneNumber;
 
 }
