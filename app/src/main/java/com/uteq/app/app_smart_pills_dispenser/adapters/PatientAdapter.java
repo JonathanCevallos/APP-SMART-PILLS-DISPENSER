@@ -49,11 +49,9 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientV
     public void onBindViewHolder(@NonNull PatientViewHolder holder, int position) {
         Patient patient = data.get(position);
 
-        holder.txtId.setText(MoreUtils.coalesce(patient.getName(), "N/D"));
-        holder.txtNombres.setText(MoreUtils.coalesce(patient.getGender(), "N/D"));
-        holder.txtArea.setText(MoreUtils.coalesce(patient.getBirth_date(), "N/D"));
-
-
+        holder.txtname.setText(MoreUtils.coalesce(patient.getName(), "N/D"));
+        holder.txtgender.setText(MoreUtils.coalesce(patient.getGender(), "N/D"));
+        holder.txtbirthDate.setText(MoreUtils.coalesce(patient.getBirth_date(), "N/D"));
 
     }
 
@@ -64,9 +62,9 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientV
 
     public class PatientViewHolder extends RecyclerView.ViewHolder {
 
-        TextView txtId;
-        TextView txtNombres;
-        TextView txtArea;
+        TextView txtname;
+        TextView txtgender;
+        TextView txtbirthDate;
         ImageView imgEvaluador;
         CardView cardView;
 
@@ -74,9 +72,9 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientV
         public PatientViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            txtId = itemView.findViewById(R.id.txtId);
-            txtNombres = itemView.findViewById(R.id.txtNombres);
-            txtArea = itemView.findViewById(R.id.txtArea);
+            txtname = itemView.findViewById(R.id.txtId);
+            txtgender = itemView.findViewById(R.id.txtNombres);
+            txtbirthDate = itemView.findViewById(R.id.txtArea);
             imgEvaluador = itemView.findViewById(R.id.imgEvaluador);
             cardView = itemView.findViewById(R.id.cardView);
         }
