@@ -15,11 +15,12 @@ import com.uteq.app.app_smart_pills_dispenser.R;
 import com.uteq.app.app_smart_pills_dispenser.models.Pill;
 import com.uteq.app.app_smart_pills_dispenser.utils.MoreUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PillAdapter extends RecyclerView.Adapter<PillAdapter.PillViewHolder> {
     private Context context;
-    private List<Pill> data;
+    private List<Pill> data = new ArrayList<>();
 
     public PillAdapter()
     {
@@ -27,7 +28,7 @@ public class PillAdapter extends RecyclerView.Adapter<PillAdapter.PillViewHolder
 
     public void setData(List<Pill> data)
     {
-        this.data = data;
+        this.data = data ;
         notifyDataSetChanged();
     }
 
@@ -47,8 +48,9 @@ public class PillAdapter extends RecyclerView.Adapter<PillAdapter.PillViewHolder
         holder.txtPillDescription.setText(MoreUtils.coalesce(pill.getDescription(), "N/D"));
         holder.txtPillRegistrationDate.setText(MoreUtils.coalesce(pill.getRegistration_date(), "N/D"));
     }
+    @Override
     public int getItemCount() {
-        return data.size();
+       return data.size();
     }
 
     public class PillViewHolder extends RecyclerView.ViewHolder {

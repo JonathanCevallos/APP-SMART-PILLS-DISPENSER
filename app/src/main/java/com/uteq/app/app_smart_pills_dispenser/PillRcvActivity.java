@@ -42,6 +42,11 @@ public class PillRcvActivity extends AppCompatActivity {
         pillAdapter = new PillAdapter();
         recyclerView.setAdapter(pillAdapter);
 
+        try {
+            getPill();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
     }
