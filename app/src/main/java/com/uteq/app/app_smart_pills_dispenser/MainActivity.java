@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnRegister;
     Button btnListPill;
+    Button btnLogin;
 
 
     private TextView txtSubtitle;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         patientAdapter = new PatientAdapter();
         recyclerView.setAdapter(patientAdapter);
 
+        btnLogin = findViewById(R.id.btnLogin);
         btnRegister = findViewById(R.id.btnRegisterCarer);
 
         try
@@ -58,6 +60,14 @@ public class MainActivity extends AppCompatActivity {
         {
             e.printStackTrace();
         }
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
+                startActivity(intent);
+            }
+        });
 
        btnRegister.setOnClickListener(new View.OnClickListener()
        {

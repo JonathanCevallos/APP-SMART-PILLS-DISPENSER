@@ -1,5 +1,6 @@
 package com.uteq.app.app_smart_pills_dispenser;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -42,6 +43,15 @@ public class CarerActivity extends AppCompatActivity {
         txtpassword = findViewById(R.id.txtpassword);
         txtRepeatPassword = findViewById(R.id.txtrepeatPassword);
 
+        Button btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         save = findViewById(R.id.btnSave);
 
         save.setOnClickListener(new View.OnClickListener() {
@@ -54,12 +64,20 @@ public class CarerActivity extends AppCompatActivity {
                 c.setPhone_number(txtphoneNumber.getText().toString());
                 c.setState((true));
 
-                if(txtpassword.getText().toString() == txtRepeatPassword.getText().toString()) {
+                String pass=txtpassword.getText().toString();
+                String repeatPass = txtRepeatPassword.getText().toString();
+
+                if(pass.equals(repeatPass)) {
 
                     addCarer(c);
+                    Intent intent = new Intent(getApplicationContext(),MainActivity.class );
+                    startActivity(intent);
+
+                    Toast.makeText(CarerActivity.this, "Successful registration. " , Toast.LENGTH_LONG).show();
+
                 }
                 else{
-                    Toast.makeText(CarerActivity.this, "Error al ingrese una buena contraseña. " , Toast.LENGTH_LONG).show();
+                    Toast.makeText(CarerActivity.this, "Error, check the password. " , Toast.LENGTH_SHORT).show();
                 }
 
             }
