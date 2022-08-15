@@ -27,6 +27,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     Button btnRegister;
+    Button btnListPill;
 
 
     private TextView txtSubtitle;
@@ -66,6 +67,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnListPill = findViewById(R.id.btnListPill);
+
+        btnListPill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, PillRcvActivity.class );
+                startActivity(intent);
+            }
+        });
+
     }
 
 

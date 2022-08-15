@@ -54,7 +54,7 @@ public class CarerActivity extends AppCompatActivity {
                 c.setPhone_number(txtphoneNumber.getText().toString());
                 c.setState((true));
 
-                if(txtpassword.toString() == txtRepeatPassword.toString()) {
+                if(txtpassword.getText().toString() == txtRepeatPassword.getText().toString()) {
 
                     addCarer(c);
                 }

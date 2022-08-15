@@ -6,29 +6,6 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-
-    <Button
-        android:id="@+id/btnRegisterCarer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
-
-
-        android:layout_marginBottom="56dp"
-        android:insetLeft="50dp"
-        android:insetTop="15dp"
-        android:insetBottom="60dp"
-        android:text="Register Carer"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/btnListPill"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View List Pills" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:background="@color/design_default_color_primary"
@@ -40,7 +17,7 @@
             android:layout_height="wrap_content" >
             <TextView
                 android:layout_width="wrap_content"
-                android:text="PACIENT LIST OF CARER: "
+                android:text="Pildoras del paciente: "
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
@@ -71,10 +48,4 @@
     </LinearLayout>
 
 
-
-
 </LinearLayout>
-
-
-
-
