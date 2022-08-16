@@ -100,8 +100,6 @@ public class CarerActivity extends AppCompatActivity {
         });
 
 
-
-
     }
 
     public void addCarer(Carer c)
@@ -114,7 +112,6 @@ public class CarerActivity extends AppCompatActivity {
             public void onResponse(Call<Carer> call, Response<Carer> response) {
                 if(response!=null) {
                     Toast.makeText(CarerActivity.this, "Successful registration.",Toast.LENGTH_LONG).show();
-
                 }
             }
 
