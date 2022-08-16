@@ -67,7 +67,7 @@
 
 
     <Button
-        android:id="@+id/btnListPill"
+        android:id="@+id/btnListAllPatient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="View all Patient list"
@@ -110,7 +110,7 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/reciclerview"
+            android:id="@+id/reciclerviewPatient"
             android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

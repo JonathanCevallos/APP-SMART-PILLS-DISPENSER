@@ -18,6 +18,8 @@ import com.uteq.app.app_smart_pills_dispenser.models.Patient;
 import com.uteq.app.app_smart_pills_dispenser.services.PatientService;
 import com.uteq.app.app_smart_pills_dispenser.utils.Apis;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -35,6 +37,7 @@ public class PatientActivity extends AppCompatActivity {
 
     String [] generos = {"Male", "Femelale", "No binary"};
 
+    Button btnBack;
     Button save;
     Button btnClean;
     @Override
@@ -85,10 +88,9 @@ public class PatientActivity extends AppCompatActivity {
             }
         });
 
-
+        btnBack = findViewById(R.id.btnBackPatient);
 
     }
-
 
     public void addPatient(Patient p)
     {
@@ -110,5 +112,7 @@ public class PatientActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
 }
