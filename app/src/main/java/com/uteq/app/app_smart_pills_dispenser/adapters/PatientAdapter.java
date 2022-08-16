@@ -71,9 +71,9 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientV
         public PatientViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            txtname = itemView.findViewById(R.id.txtNameCarer);
-            txtgender = itemView.findViewById(R.id.txtGenderPatient);
-            txtbirthDate = itemView.findViewById(R.id.txtbirthDatePatient);
+            txtname = itemView.findViewById(R.id.tvNameCarer);
+            txtgender = itemView.findViewById(R.id.tvGenderPatient);
+            txtbirthDate = itemView.findViewById(R.id.tvbirthDatePatient);
             imgEvaluador = itemView.findViewById(R.id.imgEvaluador);
             cardView = itemView.findViewById(R.id.cardView);
         }

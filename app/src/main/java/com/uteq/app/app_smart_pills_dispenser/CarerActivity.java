@@ -31,6 +31,7 @@ public class CarerActivity extends AppCompatActivity {
     EditText txtRepeatPassword;
 
     Button save;
+    Button btnClean;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,20 +67,35 @@ public class CarerActivity extends AppCompatActivity {
 
                 String pass=txtpassword.getText().toString();
                 String repeatPass = txtRepeatPassword.getText().toString();
+                String name =  txtname.getText().toString();
+                String phone = txtphoneNumber.getText().toString();
+                String email =txtemail.getText().toString();
 
-                if(pass.equals(repeatPass)) {
-
+                if(pass.equals(repeatPass) && !(pass.isEmpty() || repeatPass.isEmpty() || name.isEmpty() || phone.isEmpty() ||email.isEmpty() )) {
                     addCarer(c);
                     Intent intent = new Intent(getApplicationContext(),MainActivity.class );
                     startActivity(intent);
-
-                    Toast.makeText(CarerActivity.this, "Successful registration. " , Toast.LENGTH_LONG).show();
-
+                }
+                else if(pass.isEmpty() || repeatPass.isEmpty() || name.isEmpty() || phone.isEmpty() ||email.isEmpty() ){
+                    Toast.makeText(CarerActivity.this, "Error, check the campos. " , Toast.LENGTH_SHORT).show();
                 }
                 else{
                     Toast.makeText(CarerActivity.this, "Error, check the password. " , Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+
+        btnClean = findViewById(R.id.btnClean);
+
+        btnClean.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txtname.setText("");
+                txtphoneNumber.setText("");
+                txtemail.setText("");
+                txtpassword.setText("");
+                txtRepeatPassword.setText("");
             }
         });
 
@@ -97,7 +113,7 @@ public class CarerActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Carer> call, Response<Carer> response) {
                 if(response!=null) {
-                    Toast.makeText(CarerActivity.this, "Se registro con exito",Toast.LENGTH_LONG).show();
+                    Toast.makeText(CarerActivity.this, "Successful registration.",Toast.LENGTH_LONG).show();
 
                 }
             }

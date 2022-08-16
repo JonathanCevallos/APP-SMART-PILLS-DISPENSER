@@ -1,6 +1,7 @@
 package com.uteq.app.app_smart_pills_dispenser;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,14 +18,18 @@ public class MenuActivity extends AppCompatActivity {
 
         imgPatient = findViewById(R.id.imgPatient);
 
-
         imgPatient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        //        imgPatient.setBackgroundColor(Color.rgb(100, 100, 50));
+                Intent intent = new Intent(getApplicationContext(), PatientRcvActivity.class);
                 startActivity(intent);
             }
         });
+
+
+
+
 
     }
 }

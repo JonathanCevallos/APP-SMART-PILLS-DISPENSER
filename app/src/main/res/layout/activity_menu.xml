@@ -11,13 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imgPatient"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="start"
             android:layout_margin="20dp"
             android:background="#eec4e1"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:strokeWidth="5dp"
+            android:padding="5dp"
+            app:strokeColor="@android:color/darker_gray"
             app:srcCompat="@drawable/ic_patient" />
 
         <TextView

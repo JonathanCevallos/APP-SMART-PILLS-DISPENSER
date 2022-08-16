@@ -53,14 +53,14 @@
             android:layout_width="match_parent"
             android:layout_height="60dp" />
         <TextView
-            android:id="@+id/phonenumber"
+            android:id="@+id/birthdatePatient"
             android:layout_width="match_parent"
             android:layout_height="50px"
             android:textStyle="bold"
-            android:text="Phone number"/>
+            android:text="Patient Birthday"/>
 
         <EditText
-            android:id="@+id/txtphonenumber"
+            android:id="@+id/txtBirthDatePatient"
             android:layout_width="match_parent"
             android:layout_height="60dp" />
 
@@ -69,49 +69,18 @@
             android:layout_width="match_parent"
             android:layout_height="50px"
             android:textStyle="bold"
-            android:text="Email"/>
+            android:text="Gender"/>
 
         <EditText
-            android:id="@+id/txtemail"
+            android:id="@+id/checkGender"
             android:layout_width="match_parent"
             android:layout_height="60dp" />
 
-        <TextView
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="50px"
-            android:textStyle="bold"
-            android:text="Password"/>
-
-        <EditText
-            android:id="@+id/txtpassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textStyle="bold"
-            android:inputType="textPassword" />
-
-
-        <TextView
-            android:id="@+id/repeatpassword"
-            android:layout_width="match_parent"
-            android:layout_height="50px"
-            android:textStyle="bold"
-            android:text="Repeat password"/>
-
-
-
-        <EditText
-            android:id="@+id/txtrepeatPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword" />
 
         <Button
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="60dp"
             android:text="SAVE" />
 
         <Button

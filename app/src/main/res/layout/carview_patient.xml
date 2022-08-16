@@ -49,7 +49,7 @@
                 <TextView
                     android:text="N/D"
                     android:layout_weight="1"
-                    android:id="@+id/txtNameCarer"
+                    android:id="@+id/tvNameCarer"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -69,7 +69,7 @@
                 <TextView
                     android:text="N/D"
                     android:layout_weight="1"
-                    android:id="@+id/txtGenderPatient"
+                    android:id="@+id/tvGenderPatient"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -89,7 +89,7 @@
                 <TextView
                     android:text="N/D"
                     android:layout_weight="1"
-                    android:id="@+id/txtbirthDatePatient"
+                    android:id="@+id/tvbirthDatePatient"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" />
             </LinearLayout>

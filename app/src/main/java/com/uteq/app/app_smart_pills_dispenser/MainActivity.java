@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.uteq.app.app_smart_pills_dispenser.adapters.PatientAdapter;
-import com.uteq.app.app_smart_pills_dispenser.models.Dosage;
 import com.uteq.app.app_smart_pills_dispenser.models.Patient;
 import com.uteq.app.app_smart_pills_dispenser.services.DosageService;
 import com.uteq.app.app_smart_pills_dispenser.utils.Apis;
