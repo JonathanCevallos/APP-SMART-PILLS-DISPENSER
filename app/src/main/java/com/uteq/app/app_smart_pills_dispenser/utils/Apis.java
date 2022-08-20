@@ -8,7 +8,7 @@ import com.uteq.app.app_smart_pills_dispenser.services.PatientService;
 import com.uteq.app.app_smart_pills_dispenser.services.PillService;
 
 public class Apis {
-    public static final String URL_001="https://app-smart-pills-dispenser.herokuapp.com/";
+    public static final String URL_001="https://smart-pills-dispenser.herokuapp.com/";
 
     public static DoctorService getDoctorService()
     {

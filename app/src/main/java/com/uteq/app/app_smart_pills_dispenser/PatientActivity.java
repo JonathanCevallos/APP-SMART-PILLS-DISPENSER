@@ -84,11 +84,17 @@ public class PatientActivity extends AppCompatActivity {
 
                 addPatient(p);
 
-
             }
         });
 
         btnBack = findViewById(R.id.btnBackPatient);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PatientRcvActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
