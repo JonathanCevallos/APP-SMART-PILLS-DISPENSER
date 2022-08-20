@@ -121,6 +121,4 @@ public class PatientActivity extends AppCompatActivity {
 
 
 
-
-
 }
